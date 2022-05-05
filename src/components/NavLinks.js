@@ -29,7 +29,6 @@ const NavLinks = ({ open }) =>{
       a {
         color: #fcfcfc;
       }
-
     }
   
   `;

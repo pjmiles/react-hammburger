@@ -36,6 +36,12 @@ export default function NavBars() {
     line-height: 40px;
     margin: 0 2px;
   }
+
+  @media (max-width: 380px){
+      .logo {
+        font-size: 16px;
+      }
+    }
 `;
 
   return (
