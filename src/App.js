@@ -1,11 +1,12 @@
-import NavBars from './components/NavBars';
-import './App.css';
-
+import NavBars from "./components/Navbars/NavBars";
+import "./App.css";
+import Skills from "./components/Skills";
 
 function App() {
   return (
-    <div className="">
+    <div>
       <NavBars />
+      <Skills />
     </div>
   );
 }

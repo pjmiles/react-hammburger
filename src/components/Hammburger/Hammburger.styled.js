@@ -1,9 +1,6 @@
-import { useState } from 'react';
-import React from 'react';
-import styled from 'styled-components';
-import NavLinks from './NavLinks';
+import styled from "styled-components";
 
-const StyledHammburger = styled.div`
+const StyledHammburger = styled.span`
     display: none;
     width: 2rem;
     height: 2rem;
@@ -11,6 +8,7 @@ const StyledHammburger = styled.div`
     top: 25px;
     right: 20px;
     z-index: 20;
+    cursor: pointer;
     
     /* Hammburger query to show on mobile view only */
     @media (max-width: 768px){
@@ -20,7 +18,7 @@ const StyledHammburger = styled.div`
     }
    
     /* Hammburger styling including passing the open function when clicked */
-    div {
+    span {
     width: 2rem;
     height: 0.25rem;
     background-color: ${({ open }) => open ? '#ccc' : '#333' };
@@ -34,7 +32,7 @@ const StyledHammburger = styled.div`
     }
 
     &:nth-child(2){
-        transform: ${({ open }) => open ? 'translateX(100%)' : 'translateX(0)'};
+        transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(0)'};
         opacity: ${({ open }) => open ? 0 : 1};
     }
 
@@ -44,19 +42,4 @@ const StyledHammburger = styled.div`
 }
 `;
 
-const Hammburger = () =>{
-    // useState for Hammburger function
-    const [open, setOpen] = useState(false)
-    return(
-        <>
-            <StyledHammburger open={open} onClick={() => setOpen(!open)}>
-                <div />
-                <div />
-                <div />
-            </StyledHammburger>
-        <NavLinks open={open}/>
-        </>
-    )
-}
-
-export default Hammburger;
+export default StyledHammburger;

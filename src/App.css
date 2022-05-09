@@ -19,5 +19,17 @@
   padding: 0;
   text-decoration: none;
   list-style: none;
-  box-sizing: border-box;
+  box-sizing: inherit;
+  
 }
+
+.icon {
+  width: 11.875rem;
+  height: 11.25rem;
+  padding: 20px;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 8px;
+}
+
