@@ -6,9 +6,14 @@ import NavLinks from '../Navlinks/NavLinks';
 const Hammburger = () =>{
     // useState for Hammburger function
     const [open, setOpen] = useState(false)
+
+    const handleToggle = () =>{
+        setOpen(!open)
+    }
+
     return(
         <>
-            <StyledHammburger open={open} onClick={() => setOpen(!open)}>
+            <StyledHammburger open={open} onClick={handleToggle}>
                 <span />
                 <span />
                 <span />
